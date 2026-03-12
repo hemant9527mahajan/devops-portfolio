@@ -9,8 +9,23 @@
 body{
 margin:0;
 font-family:Arial;
-background:#0f172a;
 color:white;
+background: linear-gradient(-45deg,#0f172a,#1e293b,#020617,#1e293b);
+background-size:400% 400%;
+animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+.tools img{
+width:500px;
+margin-top:20px;
 }
 
 header{
@@ -61,15 +76,23 @@ color:#38bdf8;
 text-decoration:none;
 }
 
+.light{
+background:white;
+color:black;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Hemant Mahajan</h1>
-<p>AWS DevOps Engineer | CI/CD | Kubernetes | Automation</p>
-</header>
+    <header>
+        <h1>Hemant Mahajan</h1>
+        <p>AWS DevOps Engineer | CI/CD | Kubernetes | Automation</p>
+        
+        <button onclick="toggleMode()">Toggle Mode</button>
+        
+        </header>
 
 <section>
 
@@ -107,6 +130,18 @@ text-decoration:none;
     
 
 </section>
+
+<section>
+
+    <h2>DevOps Tools</h2>
+    
+    <div class="tools">
+    
+    <img src="https://skillicons.dev/icons?i=linux,docker,kubernetes,github,aws,ansible,bash,git" />
+    
+    </div>
+    
+    </section>
 
 <section>
 
@@ -168,11 +203,49 @@ github.com/hemant9527mahajan
 
 </section>
 
+<section>
+
+    <h2>GitHub Activity</h2>
+    
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=hemant9527mahajan&theme=github-dark">
+    
+    </section>
+
+    <section>
+
+        <h2>Contact Me</h2>
+        
+        <form>
+        
+        <input type="text" placeholder="Your Name"><br><br>
+        
+        <input type="email" placeholder="Your Email"><br><br>
+        
+        <textarea placeholder="Message"></textarea><br><br>
+        
+        <button type="submit">Send</button>
+        
+        </form>
+        
+        </section>
+
 <footer>
+
+    <script>
+
+        function toggleMode(){
+        
+        document.body.classList.toggle("light");
+        
+        }
+        
+        </script>
 
 <p>© 2026 Hemant Mahajan</p>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
